@@ -3,19 +3,19 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "5356530352:AAFFNNHhYh0VWubQarZ0aSsbYMX_OFLNhHI")
 
 #Your API ID from my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", ""))
+APP_ID = int(os.environ.get("APP_ID", "9981563"))
 
 #Your API Hash from my.telegram.org
-API_HASH = os.environ.get("API_HASH", "")
+API_HASH = os.environ.get("API_HASH", "7d259a24c15b4fea5151b1994dfcf7b0")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001572029549"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", ""))
+OWNER_ID = int(os.environ.get("OWNER_ID", "2075613301"))
 
 #Database 
 DB_URI = "postgres://sgnbheul:RScgWWRS9BN2_uZ0e2U5BKnlUJxXDQb8@tyke.db.elephantsql.com/sgnbheul"
@@ -26,7 +26,7 @@ FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = os.environ.get("START_MESSAGE", "سلام {mention} آیدی شما : {id} \n\nبهترین آپلودرفایل تلگرام : @MahdiXiFS_Bot\n\n با معرفی ما به دوستانتان از ما حمایت کنید با تشکر.")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):
