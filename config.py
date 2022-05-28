@@ -3,30 +3,30 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "5356530352:AAFFNNHhYh0VWubQarZ0aSsbYMX_OFLNhHI")
+TG_BOT_TOKEN = "5356530352:AAFFNNHhYh0VWubQarZ0aSsbYMX_OFLNhHI"
 
 #Your API ID from my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", "9981563"))
+APP_ID = 9981563
 
 #Your API Hash from my.telegram.org
-API_HASH = os.environ.get("API_HASH", "7d259a24c15b4fea5151b1994dfcf7b0")
+API_HASH = "7d259a24c15b4fea5151b1994dfcf7b0"
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001572029549"))
+CHANNEL_ID = -1001572029549
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "2075613301"))
+OWNER_ID = 2075613301
 
 #Database 
 DB_URI = "postgres://sgnbheul:RScgWWRS9BN2_uZ0e2U5BKnlUJxXDQb8@tyke.db.elephantsql.com/sgnbheul"
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+FORCE_SUB_CHANNEL = 0
 
-TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
+TG_BOT_WORKERS = 4
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "سلام {mention} آیدی شما : {id} \n\nبهترین آپلودرفایل تلگرام : @MahdiXiFS_Bot\n\n با معرفی ما به دوستانتان از ما حمایت کنید با تشکر.")
+START_MSG = "سلام {mention} آیدی شما : {id} \n\nبهترین آپلودرفایل تلگرام : @MahdiXiFS_Bot\n\nبا معرفی ما به دوستانتان از ما حمایت کنید."
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):
@@ -35,13 +35,13 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>")
+FORCE_MSG = "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>"
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "{filename}\n{previouscaption}\n\nاز آپلودرفایل ما حمایت کنید\n@MahdiXiFS_Bot")
+CUSTOM_CAPTION = "{filename}\n{previouscaption}\n\nاز آپلودرفایل ما حمایت کنید\n@MahdiXiFS_Bot"
 
 #set True if you want to prevent users from forwarding files from bot
-PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" else False
+PROTECT_CONTENT = True
 
 #Set true if you want Disable your Channel Posts Share button
 if os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True':
